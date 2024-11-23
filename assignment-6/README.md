@@ -1,4 +1,5 @@
-# A Simple Movies List App
+# Assignment6H8_Eka-Nazar-Fajriansyah
+A Simple Movies List App using React Vite
 
 ![alt text](image.png)
 
