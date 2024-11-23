@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Search = ({ onSearch }) => {
+const Search = ({ onSearch, reset }) => {
   const [query, setQuery] = useState('');
 
   const handleSearch = (e) => {
     e.preventDefault();
     onSearch(query);
   };
+
+  useEffect(() => {
+    if (reset) {
+      setQuery('');
+    }
+  }, [reset]);
 
   return (
     <form className="flex justify-center my-4" onSubmit={handleSearch}>
